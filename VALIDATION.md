@@ -4,7 +4,7 @@
 
 ### 1. Reference implementation
 
-The baseline `hscc` Stata command reproduces the frozen reference implementation in the motivating application.
+The baseline `hscc3` Stata command reproduces the frozen reference implementation in the motivating application.
 
 The optional `timefe` extension preserves the frozen HSCC-JOINT architecture in the main slope blocks, but its dedicated validation is reported separately below.
 
@@ -82,7 +82,7 @@ Dedicated numerical validation of the `timefe` implementation against an equival
 
 Use:
 
-> proposed HSCC estimator
+> proposed HSCC3 estimator
 
 > fixed-N, large-T consistency and asymptotic normality under stated regularity conditions
 
