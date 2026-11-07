@@ -1,7 +1,7 @@
 v 3
-d HSCC: Heterogeneous-Slope SCC estimator
+d HSCC3: Heterogeneous-Slope SCC estimator
 d
 d Distribution-Date: 20260928
 d
-f hscc.ado
-f hscc.sthlp
+f hscc3.ado
+f hscc3.sthlp
