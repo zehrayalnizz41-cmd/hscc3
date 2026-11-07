@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the associated manuscript when available."
-title: "HSCC for Stata"
-version: "1.0.1"
-date-released: "2026-09-27"
+title: "HSCC3 for Stata"
+version: "1.0.2"
+date-released: "2026-09-28"
 type: software
 authors:
   - family-names: "Yalnız"
     given-names: "Zehra"
-repository-code: "TO BE ADDED"
+repository-code: "https://github.com/KULLANICI_ADI/DEPO_ADI"
