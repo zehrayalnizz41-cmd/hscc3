@@ -1,4 +1,4 @@
 v 3
-d HSCC: Heterogeneous-Slope SCC estimator
+d HSCC3: Heterogeneous-Slope SCC estimator
 d Joint partial-pooling heterogeneous slopes with optional common time fixed effects and HC3 Driscoll-Kraay inference
-p hscc Heterogeneous-Slope SCC estimator
+p hscc3 Heterogeneous-Slope SCC estimator
