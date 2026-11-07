@@ -1,24 +1,24 @@
 {smcl}
-{* *! hscc 1.0.2 28sep2026}{...}
+{* *! hscc3 1.0.2 28sep2026}{...}
 
 {title:Title}
 
 {phang}
-{bf:hscc} {hline 2} Heterogeneous-Slope SCC estimator with joint partial pooling,
+{bf:hscc3} {hline 2} Heterogeneous-Slope SCC estimator with joint partial pooling,
 optional common time fixed effects, and HC3-adjusted Driscoll-Kraay inference
 
 
 {title:Syntax}
 
 {p 8 17 2}
-{cmd:hscc} {depvar} {indepvars} {ifin}
+{cmd:hscc3} {depvar} {indepvars} {ifin}
 [{cmd:,} {opt lag(#)} {opt timefe}]
 
 
 {title:Description}
 
 {pstd}
-{cmd:hscc} estimates a heterogeneous-slope panel model in which unit-specific
+{cmd:hscc3} estimates a heterogeneous-slope panel model in which unit-specific
 slopes are decomposed into a central slope, systematic heterogeneity related to
 unit-level regressor means, and residual unit-specific slope deviations.
 
@@ -75,7 +75,7 @@ slope parameters. Reported time effects use a centered mean-zero normalization.
 {title:Options}
 
 {phang}
-{opt lag(#)} sets the maximum Bartlett HAC lag. If omitted, {cmd:hscc} uses
+{opt lag(#)} sets the maximum Bartlett HAC lag. If omitted, {cmd:hscc3} uses
 
 {p 12 12 2}
 floor(4*(T/100)^(2/9))
@@ -92,21 +92,33 @@ Recovered centered common time effects are stored in {cmd:e(timefe_b)}.
 
 {title:Examples}
 
+{pstd}
+Example 1: Grunfeld dataset.
+
+{phang2}{cmd:. webuse grunfeld, clear}
+
+{phang2}{cmd:. xtset company year}
+
+{phang2}{cmd:. hscc3 invest mvalue kstock}
+
+{pstd}
+Example 2: User dataset.
+
 {phang2}{cmd:. xtset i time}
 
-{phang2}{cmd:. hscc GGI lnREC lnT GPATDE FD}
+{phang2}{cmd:. hscc3 GGI lnREC lnT GPATDE FD}
 
-{phang2}{cmd:. hscc GGI lnREC lnT GPATDE FD, lag(2)}
+{phang2}{cmd:. hscc3 GGI lnREC lnT GPATDE FD, lag(2)}
 
-{phang2}{cmd:. hscc GGI lnREC lnT GPATDE FD, timefe}
+{phang2}{cmd:. hscc3 GGI lnREC lnT GPATDE FD, timefe}
 
-{phang2}{cmd:. hscc GGI lnREC lnT GPATDE FD, timefe lag(2)}
+{phang2}{cmd:. hscc3 GGI lnREC lnT GPATDE FD, timefe lag(2)}
 
 
 {title:Stored results}
 
 {pstd}
-{cmd:hscc} stores the following in {cmd:e()}:
+{cmd:hscc3} stores the following in {cmd:e()}:
 
 {synoptset 26 tabbed}{...}
 {synopt:{cmd:e(b)}}HSCC central slope estimates{p_end}
@@ -127,7 +139,7 @@ Recovered centered common time effects are stored in {cmd:e(timefe_b)}.
 {title:Remarks}
 
 {pstd}
-The methodological contribution of HSCC is in the point-estimation layer.
+The methodological contribution of HSCC3 is in the point-estimation layer.
 Driscoll-Kraay / SCC is retained as the inference framework.
 
 {pstd}
@@ -147,4 +159,4 @@ The estimator is not tuned to preserve statistical significance.
 {title:Version}
 
 {pstd}
-HSCC 1.0.2, 28 September 2026.
+HSCC3 1.0.2, 28 September 2026.
